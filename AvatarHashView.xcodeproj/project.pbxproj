@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		345E5CD02252CCBA00AAC6A1 /* AvatarHashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CCF2252CCBA00AAC6A1 /* AvatarHashView.swift */; };
-		345E5CDE2252CCF700AAC6A1 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CDD2252CCF700AAC6A1 /* Tests.swift */; };
 		345E5CE02252CCF700AAC6A1 /* libAvatarHashView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */; };
 		345E5CEA2252CDCE00AAC6A1 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CE92252CDCE00AAC6A1 /* Crypto.swift */; };
 		345E5CEC2252CDDD00AAC6A1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CEB2252CDDD00AAC6A1 /* Colors.swift */; };
+		345E5CEE2252CE6000AAC6A1 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 		345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAvatarHashView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		345E5CCF2252CCBA00AAC6A1 /* AvatarHashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarHashView.swift; sourceTree = "<group>"; };
 		345E5CDB2252CCF700AAC6A1 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		345E5CDD2252CCF700AAC6A1 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		345E5CDF2252CCF700AAC6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345E5CE92252CDCE00AAC6A1 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		345E5CEB2252CDDD00AAC6A1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				345E5CD62252CCC300AAC6A1 /* Sources */,
-				345E5CDC2252CCF700AAC6A1 /* Tests */,
+				345E5CDC2252CCF700AAC6A1 /* AvatarHashViewTests */,
 				345E5CCD2252CCBA00AAC6A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,13 +92,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		345E5CDC2252CCF700AAC6A1 /* Tests */ = {
+		345E5CDC2252CCF700AAC6A1 /* AvatarHashViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				345E5CDD2252CCF700AAC6A1 /* Tests.swift */,
 				345E5CDF2252CCF700AAC6A1 /* Info.plist */,
+				345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */,
 			);
-			path = Tests;
+			path = AvatarHashViewTests;
 			sourceTree = "<group>";
 		};
 		345E5CE62252CDB700AAC6A1 /* Core */ = {
@@ -209,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345E5CDE2252CCF700AAC6A1 /* Tests.swift in Sources */,
+				345E5CEE2252CE6000AAC6A1 /* CryptoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
