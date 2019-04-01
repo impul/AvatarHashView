@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				345E5CD62252CCC300AAC6A1 /* Sources */,
-				345E5CDC2252CCF700AAC6A1 /* AvatarHashViewTests */,
+				345E5CDC2252CCF700AAC6A1 /* Tests */,
 				345E5CCD2252CCBA00AAC6A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,13 +92,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		345E5CDC2252CCF700AAC6A1 /* AvatarHashViewTests */ = {
+		345E5CDC2252CCF700AAC6A1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				345E5CDF2252CCF700AAC6A1 /* Info.plist */,
 				345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */,
 			);
-			path = AvatarHashViewTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		345E5CE62252CDB700AAC6A1 /* Core */ = {
