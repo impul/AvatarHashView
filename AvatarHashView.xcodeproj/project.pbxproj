@@ -12,6 +12,14 @@
 		345E5CEA2252CDCE00AAC6A1 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CE92252CDCE00AAC6A1 /* Crypto.swift */; };
 		345E5CEC2252CDDD00AAC6A1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CEB2252CDDD00AAC6A1 /* Colors.swift */; };
 		345E5CEE2252CE6000AAC6A1 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */; };
+		345E5CF62252D02A00AAC6A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CF52252D02A00AAC6A1 /* AppDelegate.swift */; };
+		345E5CF82252D02A00AAC6A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5CF72252D02A00AAC6A1 /* ViewController.swift */; };
+		345E5CFB2252D02A00AAC6A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345E5CF92252D02A00AAC6A1 /* Main.storyboard */; };
+		345E5CFD2252D02C00AAC6A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345E5CFC2252D02C00AAC6A1 /* Assets.xcassets */; };
+		345E5D002252D02C00AAC6A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345E5CFE2252D02C00AAC6A1 /* LaunchScreen.storyboard */; };
+		345E5D062252D0E000AAC6A1 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5D052252D0E000AAC6A1 /* ExampleCell.swift */; };
+		345E5D082252D23400AAC6A1 /* libAvatarHashView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */; };
+		345E5D0A225398EF00AAC6A1 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5D09225398EF00AAC6A1 /* Functional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		345E5CE92252CDCE00AAC6A1 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		345E5CEB2252CDDD00AAC6A1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		345E5CED2252CE6000AAC6A1 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		345E5CF32252D02A00AAC6A1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		345E5CF52252D02A00AAC6A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		345E5CF72252D02A00AAC6A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		345E5CFA2252D02A00AAC6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		345E5CFC2252D02C00AAC6A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		345E5CFF2252D02C00AAC6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		345E5D012252D02C00AAC6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		345E5D052252D0E000AAC6A1 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		345E5D09225398EF00AAC6A1 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		345E5CF02252D02A00AAC6A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345E5D082252D23400AAC6A1 /* libAvatarHashView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,7 +95,9 @@
 			children = (
 				345E5CD62252CCC300AAC6A1 /* Sources */,
 				345E5CDC2252CCF700AAC6A1 /* Tests */,
+				345E5CF42252D02A00AAC6A1 /* Example */,
 				345E5CCD2252CCBA00AAC6A1 /* Products */,
+				345E5D072252D23400AAC6A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +106,7 @@
 			children = (
 				345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */,
 				345E5CDB2252CCF700AAC6A1 /* Tests.xctest */,
+				345E5CF32252D02A00AAC6A1 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,8 +134,30 @@
 			children = (
 				345E5CE92252CDCE00AAC6A1 /* Crypto.swift */,
 				345E5CEB2252CDDD00AAC6A1 /* Colors.swift */,
+				345E5D09225398EF00AAC6A1 /* Functional.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		345E5CF42252D02A00AAC6A1 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				345E5CF52252D02A00AAC6A1 /* AppDelegate.swift */,
+				345E5CF72252D02A00AAC6A1 /* ViewController.swift */,
+				345E5CF92252D02A00AAC6A1 /* Main.storyboard */,
+				345E5CFC2252D02C00AAC6A1 /* Assets.xcassets */,
+				345E5CFE2252D02C00AAC6A1 /* LaunchScreen.storyboard */,
+				345E5D012252D02C00AAC6A1 /* Info.plist */,
+				345E5D052252D0E000AAC6A1 /* ExampleCell.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		345E5D072252D23400AAC6A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +198,23 @@
 			productReference = 345E5CDB2252CCF700AAC6A1 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		345E5CF22252D02A00AAC6A1 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345E5D022252D02C00AAC6A1 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				345E5CEF2252D02A00AAC6A1 /* Sources */,
+				345E5CF02252D02A00AAC6A1 /* Frameworks */,
+				345E5CF12252D02A00AAC6A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 345E5CF32252D02A00AAC6A1 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,6 +231,9 @@
 					345E5CDA2252CCF700AAC6A1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					345E5CF22252D02A00AAC6A1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 345E5CC72252CCBA00AAC6A1 /* Build configuration list for PBXProject "AvatarHashView" */;
@@ -172,6 +242,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 345E5CC32252CCBA00AAC6A1;
 			productRefGroup = 345E5CCD2252CCBA00AAC6A1 /* Products */;
@@ -180,6 +251,7 @@
 			targets = (
 				345E5CCB2252CCBA00AAC6A1 /* AvatarHashView */,
 				345E5CDA2252CCF700AAC6A1 /* Tests */,
+				345E5CF22252D02A00AAC6A1 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +264,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		345E5CF12252D02A00AAC6A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345E5D002252D02C00AAC6A1 /* LaunchScreen.storyboard in Resources */,
+				345E5CFD2252D02C00AAC6A1 /* Assets.xcassets in Resources */,
+				345E5CFB2252D02A00AAC6A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,6 +283,7 @@
 			files = (
 				345E5CEA2252CDCE00AAC6A1 /* Crypto.swift in Sources */,
 				345E5CEC2252CDDD00AAC6A1 /* Colors.swift in Sources */,
+				345E5D0A225398EF00AAC6A1 /* Functional.swift in Sources */,
 				345E5CD02252CCBA00AAC6A1 /* AvatarHashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +296,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		345E5CEF2252D02A00AAC6A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345E5D062252D0E000AAC6A1 /* ExampleCell.swift in Sources */,
+				345E5CF82252D02A00AAC6A1 /* ViewController.swift in Sources */,
+				345E5CF62252D02A00AAC6A1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -222,6 +315,25 @@
 			targetProxy = 345E5CE12252CCF700AAC6A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		345E5CF92252D02A00AAC6A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345E5CFA2252D02A00AAC6A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		345E5CFE2252D02C00AAC6A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345E5CFF2252D02C00AAC6A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		345E5CD12252CCBA00AAC6A1 /* Debug */ = {
@@ -398,6 +510,42 @@
 			};
 			name = Release;
 		};
+		345E5D032252D02C00AAC6A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X24R65DM8E;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Impl.AvatarHashView.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		345E5D042252D02C00AAC6A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X24R65DM8E;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Impl.AvatarHashView.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +572,15 @@
 			buildConfigurations = (
 				345E5CE42252CCF700AAC6A1 /* Debug */,
 				345E5CE52252CCF700AAC6A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		345E5D022252D02C00AAC6A1 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345E5D032252D02C00AAC6A1 /* Debug */,
+				345E5D042252D02C00AAC6A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AvatarHashView: UIView {
-    let blockPerSide: Int = 10
+public class AvatarHashView: UIView {
+    let blockPerSide: Int = 9
     let oneBlockSize: CGSize
     let value: Data
     
-    init(size: CGSize, hash: String) {
+    public init(size: CGSize, hash: String) {
         self.value = Data(hash.utf8).sha256
         self.oneBlockSize = CGSize(width: size.width / CGFloat(blockPerSide),
                                    height: size.height / CGFloat(blockPerSide))
@@ -24,33 +24,39 @@ class AvatarHashView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func draw(_ rect: CGRect) {
-        let background =  UIColor(hex: String(value.hex.dropFirst(26)))
-        let fill = UIColor(hex: String(value.hex.dropLast(26)))
+    override public func draw(_ rect: CGRect) {
+        let background =  UIColor(hex: String(value.hex.dropFirst(58)))
+        let fill = UIColor(hex: String(value.hex.dropLast(58)))
         
         let backgroudPath = UIBezierPath(rect: rect)
         background.setFill()
         backgroudPath.fill()
-        let halfBlocksCount = (blockPerSide * blockPerSide) / 2
+        let halfBlocksCount = Int(ceil(Double(blockPerSide) / 2.0)) * blockPerSide
         var bits: [Bool] = []
         for i in 0..<halfBlocksCount {
-            bits.append(i % 2 == 0)
+            bits.append(true)
         }
         let halfWidthBlockCount = blockPerSide / 2
+        let isEverNumber = blockPerSide * 2 == halfBlocksCount
         bits.enumerated().forEach { (offset, value) in
             let x = ((offset % halfWidthBlockCount))
             let y = ((offset - x) / halfWidthBlockCount)
             let point = CGPoint(x: x, y: y)
+            let sholdDuplicate = !(!isEverNumber && x == 5)
+    
             if value {
                 drawBlock(x: Int(point.x), y: Int(point.y), blockSize: oneBlockSize, color: fill)
-                drawBlock(x: -Int(point.x) - 1, y: Int(point.y), blockSize: oneBlockSize, color: fill)
+                
+                if sholdDuplicate {
+                    drawBlock(x: -Int(point.x), y: Int(point.y), blockSize: oneBlockSize, color: fill)
+                }
             }
             
         }
         
     }
     
-    func drawBlock(x: Int, y: Int, blockSize: CGSize, color: UIColor) {
+    private func drawBlock(x: Int, y: Int, blockSize: CGSize, color: UIColor) {
         print("x: \(x), y: \(y)")
         let halfWidthBlockCount = blockPerSide / 2
         let halfWidth = blockSize.width * CGFloat(halfWidthBlockCount)
