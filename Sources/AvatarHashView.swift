@@ -10,14 +10,10 @@ import UIKit
 
 public class AvatarHashView: UIView {
     let blockPerSide: Int = 9
-    let oneBlockSize: CGSize
     let value: Data
     
-    public init(size: CGSize, hash: String) {
+    public init(hash: String) {
         self.value = Data(hash.utf8).sha256
-        self.oneBlockSize = CGSize(width: size.width / CGFloat(blockPerSide),
-                                   height: size.height / CGFloat(blockPerSide))
-        super.init(frame: CGRect(origin: .zero, size: size))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,6 +23,8 @@ public class AvatarHashView: UIView {
     override public func draw(_ rect: CGRect) {
         let background =  UIColor(hex: String(value.hex.dropFirst(58)))
         let fill = UIColor(hex: String(value.hex.dropLast(58)))
+        let oneBlockSize = CGSize(width: rect.size.width / CGFloat(blockPerSide),
+                                  height: rect.size.height / CGFloat(blockPerSide))
         
         let backgroudPath = UIBezierPath(rect: rect)
         background.setFill()
