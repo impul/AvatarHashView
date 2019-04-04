@@ -9,4 +9,6 @@
 import UIKit
 import AvatarHashView
 
-class ExampleCell: UICollectionViewCell {}
+class ExampleCell: UICollectionViewCell {
+    @IBOutlet weak var avatarView: AvatarHashView!
+}

@@ -25,12 +25,27 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExampleCell" id="ovj-W8-ll9" customClass="ExampleCell" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="87" height="71"/>
+                                <rect key="frame" x="0.0" y="0.0" width="113" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="87" height="71"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="101"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-g8-0VU" customClass="AvatarHashView" customModule="AvatarHashView">
+                                            <rect key="frame" x="0.0" y="0.0" width="113" height="101"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="2Kb-g8-0VU" firstAttribute="leading" secondItem="ovj-W8-ll9" secondAttribute="leading" id="7sr-25-71s"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Kb-g8-0VU" secondAttribute="bottom" id="HF5-Ad-LJh"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Kb-g8-0VU" secondAttribute="trailing" id="YDg-r3-Ywx"/>
+                                    <constraint firstItem="2Kb-g8-0VU" firstAttribute="top" secondItem="ovj-W8-ll9" secondAttribute="top" id="xzO-xh-n7o"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="avatarView" destination="2Kb-g8-0VU" id="JOe-ib-iy1"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
