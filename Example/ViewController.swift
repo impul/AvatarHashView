@@ -14,7 +14,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath)
-        cell.addSubview(AvatarHashView(size: cell.bounds.size, hash: users[indexPath.row]))
+        cell.addSubview(AvatarHashView(hash: users[indexPath.row], frame: cell.bounds))
         return cell
     }
     

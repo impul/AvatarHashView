@@ -12,8 +12,10 @@ public class AvatarHashView: UIView {
     let blockPerSide: Int = 9
     let value: Data
     
-    public init(hash: String) {
+    
+    public init(hash: String, frame: CGRect) {
         self.value = Data(hash.utf8).sha256
+        super.init(frame: frame)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,7 +62,7 @@ public class AvatarHashView: UIView {
         let halfWidth = blockSize.width * CGFloat(halfWidthBlockCount)
         let point = CGPoint(x: (CGFloat(x) * blockSize.width) + halfWidth ,
                             y: CGFloat(y) * blockSize.height)
-        let path = UIBezierPath(rect: CGRect(origin: point, size: oneBlockSize))
+        let path = UIBezierPath(rect: CGRect(origin: point, size: blockSize))
         color.setFill()
         path.fill()
     }
