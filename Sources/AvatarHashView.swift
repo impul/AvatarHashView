@@ -9,12 +9,13 @@
 import UIKit
 
 public class AvatarHashView: UIView {
-    let blockPerSide: Int = 8
-    let value: Data
+    private var blockPerSide: Int
+    private var value: Data
     
     
-    public init(hash: String, frame: CGRect) {
+    public init(hash: String, frame: CGRect, blocksPerSide: Int = 8) {
         self.value = Data(hash.utf8).sha256
+        self.blockPerSide = blocksPerSide
         super.init(frame: frame)
     }
     
