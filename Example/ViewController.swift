@@ -26,6 +26,4 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let size = (UIScreen.main.bounds.size.width - 15) / 2
         return CGSize(width: size, height: size)
     }
-
 }
-
