@@ -54,8 +54,8 @@ public class AvatarHashView: UIView {
         background.setFill()
         backgroudPath.fill()
         
-        let halfBlocksCount = Int(ceil(Double(blockPerSide) / 2.0))
-        let halfAllBlocsCount = halfBlocksCount * Int(blockPerSide)
+        let halfOneSideBlocksCount = Int(ceil(Double(blockPerSide) / 2.0))
+        let halfAllBlocsCount = halfOneSideBlocksCount * Int(blockPerSide)
         let isEverBlockCount = blockPerSide % 2 == 0
         let negativeBlocksAddition = isEverBlockCount ? 1 : 0
         
@@ -65,8 +65,8 @@ public class AvatarHashView: UIView {
             let currentBlockData = currentFullBytes.sha256.map { return UInt64($0) }
             let currentValue = currentBlockData.reduce(0, +) % 2 == 0
             if currentValue {
-                let x = ((i % halfBlocksCount))
-                let y = (i / halfBlocksCount)
+                let x = ((i % halfOneSideBlocksCount))
+                let y = (i / halfOneSideBlocksCount)
                 drawBlock(x: x, y: y, blockSize: oneBlockSize, color: fill)
                 drawBlock(x: -(x + negativeBlocksAddition), y: y, blockSize: oneBlockSize, color: fill)
             }
