@@ -42,7 +42,9 @@ public class AvatarHashView: UIView {
     
     override public func draw(_ rect: CGRect) {
         let valueHex = value.hex
-        let itemsToCut = value.hex.count - 6
+        let hexCount = valueHex.count
+        let itemsToCut = hexCount - 6
+        guard itemsToCut > 0 else { return }
         let background =  UIColor(hex: String(valueHex.dropFirst(itemsToCut)))
         let fill = UIColor(hex: String(valueHex.dropLast(itemsToCut)))
         let oneBlockSize = CGSize(width: rect.size.width / CGFloat(DEFAULT_BLOKS_COUNT),
