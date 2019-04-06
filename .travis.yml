@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode10.1
+install:
+- gem install xcpretty-travis-formatter
+script:
+- xcodebuild build -project 'AvatarHashView.xcodeproj' -scheme 'AvatarHashView' | xcpretty -f `xcpretty-travis-formatter`
