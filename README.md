@@ -6,6 +6,8 @@
 # AvatarHashView
 Create user avatars withoud storing. Simple and easy to use.
 
+<img src="https://raw.githubusercontent.com/impul/AvatarHashView/master/resources/Avatars1.png" >
+<img src="https://raw.githubusercontent.com/impul/AvatarHashView/master/resources/Avatars2.png" >
 ## Features
 - Create user avatar
 - Stor avatar to UIImage
