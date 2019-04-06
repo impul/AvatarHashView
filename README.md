@@ -7,8 +7,8 @@
 Create user avatars withoud storing. Simple and easy to use.
 
 <p float="left">
-<img src="/resources/Avatars1.png" width="100"/>
-<img src="/resources/Avatars2.png" width="100"/>
+<img src="/resources/Avatars1.png" width="250"/>
+<img src="/resources/Avatars2.png" width="250"/>
 </p>
 
 ## Features
