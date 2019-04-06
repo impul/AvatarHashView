@@ -4,7 +4,7 @@
 [![Badge w/ Licence](https://cocoapod-badges.herokuapp.com/l/AvatarHashView/badge.svg)](https://cocoadocs.org/docsets/AvatarHashView)
 
 # AvatarHashView
-Create user avatars withoud storing. Simple and easy to use.
+Create user avatars without storing. Simple and easy to use.
 
 <p float="left">
 <img src="/resources/Avatars1.png" width="250"/>
@@ -13,7 +13,7 @@ Create user avatars withoud storing. Simple and easy to use.
 
 ## Features
 - Create user avatar
-- Stor avatar to UIImage
+- Store avatar to UIImage
 ## Installation
 ### CocoaPods
 <p>To integrate AvatarHashView into your Xcode project using <a href="http://cocoapods.org">CocoaPods</a>, specify it in your <code>Podfile</code>:</p>
@@ -31,9 +31,9 @@ github "impul/AvatarHashView"
 - If you **want to contribute**, submit a pull request.
 ## How to use
 First of all you can review Example target.
-You can use AvatarHashView by setting UIView class on XIB or Storyboard:
+You can use AvatarHashView by setting UIView class:
 ```
-@IBOutlet weak var avatarView: UIImageView!
+@IBOutlet weak var avatarView: AvatarHashView!
 
 ...
 
