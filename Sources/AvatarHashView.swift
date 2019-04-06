@@ -33,6 +33,13 @@ public class AvatarHashView: UIView {
         setNeedsDisplay()
     }
     
+    public var image: UIImage {
+        let renderer = UIGraphicsImageRenderer(size: bounds.size)
+        return renderer.image { ctx in
+            drawHierarchy(in: bounds, afterScreenUpdates: true)
+        }
+    }
+    
     override public func draw(_ rect: CGRect) {
         let valueHex = value.hex
         let itemsToCut = value.hex.count - 6
