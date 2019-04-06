@@ -19,7 +19,6 @@
 		345E5D002252D02C00AAC6A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345E5CFE2252D02C00AAC6A1 /* LaunchScreen.storyboard */; };
 		345E5D062252D0E000AAC6A1 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5D052252D0E000AAC6A1 /* ExampleCell.swift */; };
 		345E5D082252D23400AAC6A1 /* libAvatarHashView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */; };
-		345E5D0A225398EF00AAC6A1 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5D09225398EF00AAC6A1 /* Functional.swift */; };
 		3482B2BB2258FB930072FD02 /* AvatarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3482B2BA2258FB930072FD02 /* AvatarDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		345E5CFF2252D02C00AAC6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		345E5D012252D02C00AAC6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345E5D052252D0E000AAC6A1 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
-		345E5D09225398EF00AAC6A1 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		3482B2BA2258FB930072FD02 /* AvatarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +134,6 @@
 			children = (
 				345E5CE92252CDCE00AAC6A1 /* Crypto.swift */,
 				345E5CEB2252CDDD00AAC6A1 /* Colors.swift */,
-				345E5D09225398EF00AAC6A1 /* Functional.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -286,7 +283,6 @@
 			files = (
 				345E5CEA2252CDCE00AAC6A1 /* Crypto.swift in Sources */,
 				345E5CEC2252CDDD00AAC6A1 /* Colors.swift in Sources */,
-				345E5D0A225398EF00AAC6A1 /* Functional.swift in Sources */,
 				345E5CD02252CCBA00AAC6A1 /* AvatarHashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
