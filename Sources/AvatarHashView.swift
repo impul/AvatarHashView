@@ -47,16 +47,16 @@ public class AvatarHashView: UIView {
         guard itemsToCut > 0 else { return }
         let background =  UIColor(hex: String(valueHex.dropFirst(itemsToCut)))
         let fill = UIColor(hex: String(valueHex.dropLast(itemsToCut)))
-        let oneBlockSize = CGSize(width: rect.size.width / CGFloat(DEFAULT_BLOKS_COUNT),
-                                  height: rect.size.height / CGFloat(DEFAULT_BLOKS_COUNT))
+        let oneBlockSize = CGSize(width: rect.size.width / CGFloat(blockPerSide),
+                                  height: rect.size.height / CGFloat(blockPerSide))
         
         let backgroudPath = UIBezierPath(rect: rect)
         background.setFill()
         backgroudPath.fill()
         
-        let halfBlocksCount = Int(ceil(Double(DEFAULT_BLOKS_COUNT) / 2.0))
-        let halfAllBlocsCount = halfBlocksCount * Int(DEFAULT_BLOKS_COUNT)
-        let isEverBlockCount = DEFAULT_BLOKS_COUNT % 2 == 0
+        let halfBlocksCount = Int(ceil(Double(blockPerSide) / 2.0))
+        let halfAllBlocsCount = halfBlocksCount * Int(blockPerSide)
+        let isEverBlockCount = blockPerSide % 2 == 0
         let negativeBlocksAddition = isEverBlockCount ? 1 : 0
         
         for var i in 0..<halfAllBlocsCount {
@@ -75,7 +75,7 @@ public class AvatarHashView: UIView {
     
     // MARK: - Private
     private func drawBlock(x: Int, y: Int, blockSize: CGSize, color: UIColor) {
-        let halfWidthBlockCount = DEFAULT_BLOKS_COUNT / 2
+        let halfWidthBlockCount = blockPerSide / 2
         let halfWidth = blockSize.width * CGFloat(halfWidthBlockCount)
         let point = CGPoint(x: (CGFloat(x) * blockSize.width) + halfWidth ,
                             y: CGFloat(y) * blockSize.height)
