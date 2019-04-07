@@ -8,14 +8,14 @@
 
 import UIKit
 
-public var DEFAULT_BLOKS_COUNT: UInt8 = 10
+public var AVATAR_DEFAULT_BLOKS_COUNT: UInt8 = 10
 
 public class AvatarHashView: UIView {
     private var blockPerSide: UInt8
     private var value: Data
     
     // MARK: - Init
-    public init(hash: String, frame: CGRect, blocksPerSide: UInt8 = DEFAULT_BLOKS_COUNT) {
+    public init(hash: String, frame: CGRect, blocksPerSide: UInt8 = AVATAR_DEFAULT_BLOKS_COUNT) {
         self.value = Data(hash.utf8).sha256
         self.blockPerSide = blocksPerSide
         super.init(frame: frame)
@@ -23,12 +23,12 @@ public class AvatarHashView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         self.value = Data([UInt8(arc4random() % UInt32(UInt8.max))]).sha256
-        self.blockPerSide = DEFAULT_BLOKS_COUNT
+        self.blockPerSide = AVATAR_DEFAULT_BLOKS_COUNT
         super.init(coder: aDecoder)
     }
     
     // MARK: - Public
-    public func setUser(hash: String, blocksCount: UInt8 = DEFAULT_BLOKS_COUNT) {
+    public func setUser(hash: String, blocksCount: UInt8 = AVATAR_DEFAULT_BLOKS_COUNT) {
         self.value = Data(hash.utf8).sha256
         setNeedsDisplay()
     }
