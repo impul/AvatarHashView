@@ -10,7 +10,7 @@ import UIKit
 import AvatarHashView
 
 class ListAvatarsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private let users = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eith", "Nine", "Eleven", "Ten"]
+    private let users = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Eleven", "Ten"]
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ExampleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExampleCell", for: indexPath) as! ExampleCell
