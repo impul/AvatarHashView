@@ -60,7 +60,7 @@ public class AvatarHashView: UIView {
         let negativeBlocksAddition = isEverBlockCount ? 1 : 0
         
         for var i in 0..<halfAllBlocsCount {
-            let advanceValueBytes = Data(bytes: &i, count: MemoryLayout.size(ofValue: i))
+            let advanceValueBytes = Data("\(i)".utf8)
             let currentFullBytes = value + advanceValueBytes
             let currentBlockData = currentFullBytes.sha256.map { return UInt64($0) }
             let currentValue = currentBlockData.reduce(0, +) % 2 == 0

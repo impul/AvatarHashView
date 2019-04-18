@@ -141,8 +141,8 @@
 		345E5CF42252D02A00AAC6A1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				345E5CF52252D02A00AAC6A1 /* AppDelegate.swift */,
 				345E5CF72252D02A00AAC6A1 /* ListAvatarsViewController.swift */,
+				345E5CF52252D02A00AAC6A1 /* AppDelegate.swift */,
 				345E5CF92252D02A00AAC6A1 /* Main.storyboard */,
 				345E5CFC2252D02C00AAC6A1 /* Assets.xcassets */,
 				345E5CFE2252D02C00AAC6A1 /* LaunchScreen.storyboard */,
