@@ -13,15 +13,18 @@ public var AVATAR_DEFAULT_BLOKS_COUNT: UInt8 = 10
 public class AvatarHashView: UIView {
     private var blockPerSide: UInt8
     private var value: Data
+    private var scheme: ColorScheme
     
     // MARK: - Init
-    public init(hash: String, frame: CGRect, blocksPerSide: UInt8 = AVATAR_DEFAULT_BLOKS_COUNT) {
+    public init(hash: String, frame: CGRect, blocksPerSide: UInt8 = AVATAR_DEFAULT_BLOKS_COUNT, scheme: ColorScheme = .fromName) {
+        self.scheme = scheme
         self.value = Data(hash.utf8).sha256
         self.blockPerSide = blocksPerSide
         super.init(frame: frame)
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.scheme = .fromName
         self.value = Data([UInt8(arc4random() % UInt32(UInt8.max))]).sha256
         self.blockPerSide = AVATAR_DEFAULT_BLOKS_COUNT
         super.init(coder: aDecoder)
@@ -41,17 +44,12 @@ public class AvatarHashView: UIView {
     }
     
     override public func draw(_ rect: CGRect) {
-        let valueHex = value.hex
-        let hexCount = valueHex.count
-        let itemsToCut = hexCount - 6
-        guard itemsToCut > 0 else { return }
-        let background =  UIColor(hex: String(valueHex.dropFirst(itemsToCut)))
-        let fill = UIColor(hex: String(valueHex.dropLast(itemsToCut)))
+        let colors = scheme.colors(from: value.hex)
         let oneBlockSize = CGSize(width: rect.size.width / CGFloat(blockPerSide),
                                   height: rect.size.height / CGFloat(blockPerSide))
         
         let backgroudPath = UIBezierPath(rect: rect)
-        background.setFill()
+        colors.background.setFill()
         backgroudPath.fill()
         
         let halfOneSideBlocksCount = Int(ceil(Double(blockPerSide) / 2.0))
@@ -68,8 +66,8 @@ public class AvatarHashView: UIView {
             if currentValue {
                 let x = ((i % halfOneSideBlocksCount))
                 let y = (i / halfOneSideBlocksCount)
-                drawBlock(x: x, y: y, blockSize: oneBlockSize, color: fill)
-                drawBlock(x: -(x + negativeBlocksAddition), y: y, blockSize: oneBlockSize, color: fill)
+                drawBlock(x: x, y: y, blockSize: oneBlockSize, color: colors.foreground)
+                drawBlock(x: -(x + negativeBlocksAddition), y: y, blockSize: oneBlockSize, color: colors.foreground)
             }
         }
     }
