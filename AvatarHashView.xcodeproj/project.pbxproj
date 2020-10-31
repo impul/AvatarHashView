@@ -20,6 +20,7 @@
 		345E5D062252D0E000AAC6A1 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E5D052252D0E000AAC6A1 /* ExampleCell.swift */; };
 		345E5D082252D23400AAC6A1 /* libAvatarHashView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345E5CCC2252CCBA00AAC6A1 /* libAvatarHashView.a */; };
 		3482B2BB2258FB930072FD02 /* AvatarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3482B2BA2258FB930072FD02 /* AvatarDetailViewController.swift */; };
+		34B1059C254DCEB900F118F7 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1059B254DCEB900F118F7 /* ColorScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		345E5D012252D02C00AAC6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345E5D052252D0E000AAC6A1 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		3482B2BA2258FB930072FD02 /* AvatarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarDetailViewController.swift; sourceTree = "<group>"; };
+		34B1059B254DCEB900F118F7 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				345E5CE92252CDCE00AAC6A1 /* Crypto.swift */,
 				345E5CEB2252CDDD00AAC6A1 /* Colors.swift */,
+				34B1059B254DCEB900F118F7 /* ColorScheme.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B1059C254DCEB900F118F7 /* ColorScheme.swift in Sources */,
 				345E5CEA2252CDCE00AAC6A1 /* Crypto.swift in Sources */,
 				345E5CEC2252CDDD00AAC6A1 /* Colors.swift in Sources */,
 				345E5CD02252CCBA00AAC6A1 /* AvatarHashView.swift in Sources */,
